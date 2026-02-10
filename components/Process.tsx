@@ -17,10 +17,10 @@ const ModernSnakeFlow = () => {
         
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-3 md:mb-3">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
-            The Vicious Cycle of <span className="text-red-600">Stagnation</span>
+          <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">
+            Our Work <span className="text-red-600">Process</span>
           </h2>
-          <div className="h-1.5 w-24 bg-red-600 mx-auto rounded-full" />
+          <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
         </div>
 
         {/* The Flow Container */}

@@ -28,15 +28,13 @@ const WhyChoose = () => {
   return (
     <section id="whychoose" className="relative py-8 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Title */}
-        <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-black text-center text-[#EB433D] mb-20 tracking-tight"
-        >
-          Why Brand Make?
-        </motion.h2>
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3">
+            Why <span className="text-red-600 italic">Brand Make?</span>
+          </h2>
+            <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
+        </div>
 
         {/* Timeline wrapper */}
         <div className="relative">

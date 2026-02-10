@@ -77,17 +77,15 @@ const caseStudies = [
 /* ---------------- Component ---------------- */
 export default function ClientStats() {
   return (
-    <section className="py-20 bg-slate-50/60">
+    <section className="py-10 bg-slate-50/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3">
             Real Growth <span className="text-red-600 italic">Measured</span>
           </h2>
-          <p className="max-w-xl mx-auto text-slate-600 text-sm md:text-base">
-            Performance-driven results that speak louder than promises
-          </p>
+            <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
         </div>
 
         {/* Slider */}
