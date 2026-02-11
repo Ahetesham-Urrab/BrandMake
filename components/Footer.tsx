@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start mb-6">
               {/* BRAND LOGO IMAGE */}
               <img 
-                src="/bm-logo-footer.png" 
+                src="/footer-logo.svg" 
                 alt="Brand Make Logo" 
                 className="w-32 h-auto object-contain hover:scale-105 transition-transform duration-300 cursor-pointer"
               />

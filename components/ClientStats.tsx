@@ -89,7 +89,7 @@ export default function ClientStats() {
         </div>
 
         {/* Slider */}
-        <div className="relative bg-white rounded-[2.5rem] border shadow-[0_25px_80px_-25px_rgba(0,0,0,0.12)] p-6 md:p-12 lg:p-16">
+        <div className="relative bg-red-50 rounded-[2.5rem] border shadow-lg p-6 md:p-12 lg:p-16">
 
           <Swiper
             modules={[Autoplay, Navigation]}
@@ -114,10 +114,10 @@ export default function ClientStats() {
                       Case Study · {item.client}
                     </p>
 
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#EB433D] to-black bg-clip-text text-transparent leading-tight">
                       {item.title}
                       <br />
-                      <span className="text-red-600">{item.highlight}</span>
+                      <span className="text-black">{item.highlight}</span>
                     </h3>
                   </div>
 
