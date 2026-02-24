@@ -14,7 +14,7 @@ export default function HorizontalCTA() {
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#EB433D]/20 to-orange-200/20 rounded-full blur-[100px] -mr-40 -mt-40" />
           <div className="absolute bottom-0 left-0 w-60 h-60 bg-blue-100 rounded-full blur-[80px] -ml-30 -mb-30 opacity-60" />
-
+          
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
             
             {/* 1. Header Section */}

@@ -21,7 +21,7 @@ export default function TrustedClient() {
     <section className="py-10 overflow-hidden">
       <div className="container mx-auto px-4 mb-8">
         <h2 className="text-3xl md:text-4xl font-black text-center text-slate-900 tracking-tight">
-          Trusted By <span className="text-red-600">Industry Leaders</span>
+         Trusted by <span className="text-red-600"> Healthcare Practices That Believe in Growth</span>
         </h2>
         <div className="h-1 w-12 bg-red-600 mx-auto mt-4 rounded-full" />
       </div>

@@ -1,54 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Search, 
-  BarChart3, 
-  Globe, 
-  Cpu, 
-  MessageSquare, 
+import {
+  Search,
+  BarChart3,
+  Globe,
+  Cpu,
+  MessageSquare,
   Zap,
-  ArrowUpRight 
+  ArrowUpRight,
 } from "lucide-react";
 
 const services = [
   {
-    title: "SEO Optimization",
+    title: "Limited or poor online visibility",
     desc: "Rank higher on Google with our advanced data-driven SEO techniques.",
     icon: <Search className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-blue-600",
     light: "bg-blue-50",
   },
   {
-    title: "Content Marketing",
+    title: "Weak market positioning",
     desc: "Storytelling that converts. We create content that speaks to your audience.",
     icon: <MessageSquare className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-[#EB433D]",
     light: "bg-red-50",
   },
   {
-    title: "Digital Strategy",
+    title: "Low-quality or unqualified leads",
     desc: "Custom roadmaps designed to scale your business across all channels.",
     icon: <Globe className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-purple-600",
     light: "bg-purple-50",
   },
   {
-    title: "Data Analytics",
+    title: "Inconsistent patient flow",
     desc: "Real-time insights and performance tracking to maximize your ROI.",
     icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-emerald-600",
     light: "bg-emerald-50",
   },
   {
-    title: "AI Automation",
+    title: "No clear tracking of marketing ROI",
     desc: "Leverage cutting-edge AI to streamline your marketing workflows.",
     icon: <Cpu className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-indigo-600",
     light: "bg-indigo-50",
   },
   {
-    title: "PPC Advertising",
+    title: "No Credibility and Growth",
     desc: "Targeted ad campaigns that put your brand in front of the right buyers.",
     icon: <Zap className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-orange-500",
@@ -59,12 +59,11 @@ const services = [
 export default function Services() {
   return (
     <section className="py-10 relative overflow-hidden" id="services">
-
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-2xl mx-auto mb-4">
+        <div className="text-center max-w-7xl mx-auto mb-4">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 mb-4">
-            Our <span className="text-[#EB433D]">Services</span>
+            Most Clinic/Hospital <span className="text-red-600">Face Challenges one of Below</span> 
           </h2>
           <div className="h-1.5 w-16 bg-[#EB433D] mx-auto rounded-full shadow-[0_0_10px_rgba(235,67,61,0.3)]" />
         </div>
@@ -83,9 +82,10 @@ export default function Services() {
             >
               {/* Main Card */}
               <div className="relative h-full p-5 md:p-6 rounded-[2.5rem] bg-white border border-slate-200 shadow-[0_4px_20px_-1px_rgba(0,0,0,0.05)] transition-all duration-500 group-hover:border-[#EB433D]/40 group-hover:shadow-[0_30px_60px_-15px_rgba(235,67,61,0.2)] overflow-hidden">
-                
                 {/* 2. Glassy Background Gradient (Before Hover) */}
-                <div className={`absolute top-0 left-0 w-full h-full opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-500 bg-gradient-to-br ${service.accent} to-transparent`} />
+                <div
+                  className={`absolute top-0 left-0 w-full h-full opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-500 bg-gradient-to-br ${service.accent} to-transparent`}
+                />
 
                 {/* 3. Static Index Number (Low Opacity) */}
                 <span className="absolute top-6 right-8 text-6xl font-black text-slate-100 opacity-40 group-hover:opacity-100 group-hover:text-[#EB433D]/5 transition-all duration-500 select-none">
@@ -95,8 +95,10 @@ export default function Services() {
                 {/* 4. Styled Icon Container */}
                 <div className="relative mb-10 inline-flex">
                   {/* The 'Glow' behind icon before hover */}
-                  <div className={`absolute -inset-3 rounded-3xl ${service.light} opacity-60 blur-sm group-hover:opacity-0 transition-opacity`} />
-                  
+                  <div
+                    className={`absolute -inset-3 rounded-3xl ${service.light} opacity-60 blur-sm group-hover:opacity-0 transition-opacity`}
+                  />
+
                   {/* The Icon Box */}
                   <div className="relative z-10 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm group-hover:bg-[#EB433D] group-hover:rotate-12 group-hover:border-transparent transition-all duration-500">
                     <div className="text-slate-700 group-hover:text-white transition-colors duration-300">
@@ -110,23 +112,59 @@ export default function Services() {
                   <h4 className="text-lg md:text-2xl font-black text-slate-900 mb-3 flex items-center justify-between">
                     {service.title}
                     <div className="p-1.5 rounded-full bg-slate-50 group-hover:bg-red-50 transition-colors">
-                        <ArrowUpRight className="w-4 h-4 text-slate-300 group-hover:text-[#EB433D] transition-all" />
+                      <ArrowUpRight className="w-4 h-4 text-slate-300 group-hover:text-[#EB433D] transition-all" />
                     </div>
                   </h4>
-                  <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium group-hover:text-slate-700 transition-colors">
+                  {/* <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium group-hover:text-slate-700 transition-colors">
                     {service.desc}
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* 6. Glowing Energy Accent (Static + Hover) */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-slate-100 overflow-hidden">
-                  <div className={`h-full ${service.accent} w-1.5 group-hover:w-full transition-all duration-700 ease-in-out`} />
+                  <div
+                    className={`h-full ${service.accent} w-1.5 group-hover:w-full transition-all duration-700 ease-in-out`}
+                  />
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+        whileHover={{ y: -10 }}
+        className="group relative h-full"
+      >
+         <div className="max-w-7xl mx-auto px-4 mt-10 text-center relative z-10">
+          <div
+            className="
+      inline-block
+      bg-gradient-to-b from-[#fe4d46] to-[#bc2928] text-white shadow-xl
+      text-white
+      px-8 md:px-14
+      py-5 md:py-7
+      rounded-2xl
+      text-lg md:text-2xl
+      font-extrabold
+      tracking-tight
+      cursor-pointer
+      transition-all
+      duration-300
+      ease-out
+
+      hover:-translate-y-1
+      hover:scale-[1.03]
+      hover:shadow-[0_20px_50px_rgba(235,67,61,0.45)]
+    "
+          >
+           If you relate to these — your marketing needs structure, not just promotion.
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

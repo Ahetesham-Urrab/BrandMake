@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, easeOut } from "framer-motion";
-import { CheckCircle, TrendingUp, Users, Target } from "lucide-react";
+import { CheckCircle, TrendingUp, Users, Target, PhoneCallIcon } from "lucide-react";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -99,21 +99,19 @@ export default function Hero() {
               variants={itemVariants}
               className="text-3xl leading-tight font-extrabold text-black sm:text-3xl md:text-4xl xl:text-5xl"
             >
-              <span className="block">#1 Professional</span>
+              <span className="block">More Genuine Leads</span>
               <span className="block bg-gradient-to-r from-[#EB433D] to-black bg-clip-text text-transparent">
-                Digital Marketing Agency
+              More Patients. Stronger Practice.
+
               </span>
-              <span className="block">You Can Trust</span>
+              {/* <span className="block">You Can Trust</span> */}
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-700 sm:text-base md:text-lg lg:mx-0"
             >
-              At Brand Make, our team of experts is dedicated to helping your
-              business grow online with tailored strategies in SEO, PPC, and
-              content marketing.
-            </motion.p>
+              Be visible where real patients search, compare, and choose - with Performance Marketing</motion.p>
 
             {/* Features */}
             <motion.div
@@ -143,17 +141,18 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setOpen(true)}
-                className="w-full rounded-xl bg-[#EB433D] px-8 py-4 text-base font-bold text-white shadow-lg shadow-red-200 transition sm:w-auto"
+                className="w-full rounded-xl bg-[#EB433D] px-8 py-4 text-base font-bold text-white shadow-lg shadow-red-200 transition sm:w-auto flex"
               >
-                Enquire Now
+              <PhoneCallIcon className="h-5 w-5 me-2"/> Book A Strategy Call
+
               </motion.button>
-              <motion.a
+              {/* <motion.a
                 whileHover={{ backgroundColor: "#000", color: "#fff" }}
                 href="#services"
                 className="w-full rounded-xl border-2 border-black px-8 py-4 text-center text-base font-bold text-black transition sm:w-auto"
               >
                 View Services
-              </motion.a>
+              </motion.a> */}
             </motion.div>
           </motion.div>
 

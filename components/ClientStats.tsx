@@ -83,7 +83,7 @@ export default function ClientStats() {
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3">
-            Real Growth <span className="text-red-600 italic">Measured</span>
+            See the  <span className="text-red-600">Real Impact We Deliver</span>
           </h2>
             <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
         </div>
