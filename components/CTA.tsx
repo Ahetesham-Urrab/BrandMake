@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <section className="w-full bg-slate-50/60 py-14">
+    <section className="w-full bg-[#FDFEFF] py-14">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Card */}

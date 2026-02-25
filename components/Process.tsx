@@ -34,7 +34,7 @@ const steps = [
 
 const ModernSnakeFlow = () => {
   return (
-    <section className="py-8 overflow-hidden">
+    <section className="py-8 overflow-hidden bg-[#FDFEFF]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-6">

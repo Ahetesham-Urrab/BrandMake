@@ -45,7 +45,7 @@ const partners = [
 
 export default function HealthcareGrowthGrid() {
   return (
-    <section className="py-10 bg-white">
+    <section className="py-10 bg-[#FDFEFF]">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Header (shared) */}

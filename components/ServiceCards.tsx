@@ -13,7 +13,7 @@ const services = [
 
 export default function ServiceImageCards() {
   return (
-    <section className=" py-8">
+    <section className=" py-8 bg-[#FDFEFF]">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Header */}

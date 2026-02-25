@@ -83,7 +83,7 @@ const caseStudies = [
 /* ---------------- Component ---------------- */
 export default function ClientStats() {
   return (
-    <section className="py-14 bg-slate-50/60">
+    <section className="py-14 bg-[#FDFEFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-10">

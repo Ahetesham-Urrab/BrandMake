@@ -17,7 +17,7 @@ export default function TrustedClient() {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-12 overflow-hidden">
+    <section className="py-12 overflow-hidden bg-[#FDFEFF]">
       <div className="container mx-auto px-4 mb-10">
         <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3 text-center">
           Trusted by{" "}

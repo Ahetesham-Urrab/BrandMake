@@ -27,7 +27,7 @@ const brandPoints = [
 export default function About() {
   return (
     <section
-      className="py-20 md:py-18 relative overflow-hidden bg-white"
+      className="py-20 md:py-18 relative overflow-hidden bg-[#FDFEFF]"
       id="about"
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
