@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
   motion,
   useMotionValue,
@@ -17,23 +18,21 @@ import "swiper/css/navigation";
 
 /* ---------------- Counter ---------------- */
 const Counter = ({ value, color }: { value: string; color: string }) => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const ref = React.useRef<HTMLHeadingElement | null>(null);
+  const isInView = useInView(ref, { once: true });
 
   const numericValue = parseFloat(value.replace(/[^0-9.]/g, "")) || 0;
   const suffix = value.replace(/[0-9.]/g, "");
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) =>
-    value.includes(".")
-      ? parseFloat(latest.toFixed(1))
-      : Math.round(latest)
+    value.includes(".") ? parseFloat(latest.toFixed(1)) : Math.round(latest),
   );
 
   useSpring(count, { stiffness: 40, damping: 20 });
 
   React.useEffect(() => {
-    count.set(isInView ? numericValue : 0);
+    if (isInView) count.set(numericValue);
   }, [isInView, numericValue, count]);
 
   return (
@@ -51,50 +50,55 @@ const Counter = ({ value, color }: { value: string; color: string }) => {
 /* ---------------- Data ---------------- */
 const caseStudies = [
   {
-    client: "HEAL PSORIASIS",
-    title: "Dominating the search landscape for",
+    client: "Centre for Cosmetic & Recontructive Surgery",
+    logo: "/logos/4.jpg.jpeg", // put logo in public/logos
+    title:
+      "A premium plastic and cosmetic surgery clinic in Thane, offering world-class treatments with trusted expertise.",
     highlight: "Mumbai's Top Specialty Care",
     stats: [
-      { label: "1st Page Keywords", value: "100+", color: "#f97316" },
-      { label: "Organic Growth", value: "500%", color: "#a855f7" },
-      { label: "Monthly Reach", value: "121M", color: "#0ea5e9" },
-      { label: "Monthly Traffic", value: "2K+", color: "#ef4444" },
+      {
+        label: "Increase in Treatment Searches in Thane",
+        value: "40%",
+        color: "#f97316",
+      },
+      { label: "Relevant, High-Intent Leads", value: "90%", color: "#a855f7" },
+      { label: "Surgeries in First 4 Months", value: "60%", color: "#0ea5e9" },
+      { label: "ROAS", value: "10X", color: "#ef4444" },
     ],
   },
   {
-    client: "DENTAL CLINIC",
-    title: "Scaling patient acquisition for a",
+    client: "Avanza Hair Transplant Clinic",
+    logo: "/logos/3.jpg.jpeg",
+    title:
+      "A leading celebrity clinic in India, known for premium treatments, looking to build a strong digital-led patient acquisition system.",
     highlight: "Premium Dental Network",
     stats: [
-      { label: "CPL Reduction", value: "40%", color: "#10b981" },
-      { label: "Monthly Leads", value: "450+", color: "#f59e0b" },
-      { label: "Conv. Rate", value: "12%", color: "#6366f1" },
-      { label: "Ad ROI", value: "8.2x", color: "#ec4899" },
+      { label: "Increase in Clinic Footfall", value: "50%", color: "#10b981" },
+      { label: "Return on Ad Spend (ROAS)", value: "20X", color: "#f59e0b" },
+      { label: "Reduced Cost Per Lead", value: "50%", color: "#6366f1" },
+      { label: "Achieved CTR", value: "20% ", color: "#ec4899" },
     ],
   },
 ];
-
 /* ---------------- Component ---------------- */
 export default function ClientStats() {
   return (
-    <section className="py-10 bg-slate-50/60">
+    <section className="py-14 bg-slate-50/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-10">
           <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3">
-            See the  <span className="text-red-600">Real Impact We Deliver</span>
+            See the <span className="text-red-600">Real Impact We Deliver</span>
           </h2>
-            <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
+          <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
         </div>
 
         {/* Slider */}
-        <div className="relative bg-red-50 rounded-[2.5rem] border shadow-lg p-6 md:p-12 lg:p-16">
-
+        <div className="relative bg-gradient-to-br from-red-50 via-white to-red-100 rounded-[2.5rem] border shadow-xl p-6 md:p-12 lg:p-16">
           <Swiper
             modules={[Autoplay, Navigation]}
             slidesPerView={1}
-            spaceBetween={50}
+            spaceBetween={40}
             loop
             speed={700}
             grabCursor
@@ -106,36 +110,42 @@ export default function ClientStats() {
           >
             {caseStudies.map((item, idx) => (
               <SwiperSlide key={idx}>
-                <div className="grid gap-10 lg:grid-cols-12 items-center">
-
+                <div className="grid gap-6 lg:grid-cols-12 items-center">
                   {/* LEFT */}
-                  <div className="lg:col-span-5 space-y-5 text-center lg:text-left">
-                    <p className="text-xs font-semibold tracking-widest text-red-600 uppercase">
-                      Case Study · {item.client}
+                  <div className="lg:col-span-5 space-y-4 text-center lg:text-left">
+                    <span className="inline-block bg-white text-red-600 text-xs font-semibold px-3 py-1 rounded-full shadow">
+                      Case Study
+                    </span>
+
+                    <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900">
+                      {item.client}
+                    </h3>
+
+                    <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-md mx-auto lg:mx-0">
+                      {item.title}
                     </p>
 
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#EB433D] to-black bg-clip-text text-transparent leading-tight">
-                      {item.title}
-                      <br />
-                      <span className="text-black">{item.highlight}</span>
-                    </h3>
+                    {/* <p className="text-xs text-slate-500 font-medium">
+                      Verified performance • Real patient demand growth
+                    </p> */}
                   </div>
 
                   {/* RIGHT */}
-                  <div className="lg:col-span-7 grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-6">
                     {item.stats.map((stat, i) => (
                       <div
                         key={i}
-                        className="rounded-2xl bg-slate-50 p-5 sm:p-6 text-center shadow-md hover:shadow-xl transition"
+                        className="rounded-2xl bg-white p-5 sm:p-6 text-center shadow-md
+                                   hover:shadow-2xl hover:-translate-y-1
+                                   transition-all duration-300 border border-slate-100"
                       >
                         <Counter value={stat.value} color={stat.color} />
-                        <p className="mt-1 text-xs font-bold tracking-wide text-slate-500 uppercase">
+                        <p className="mt-2 text-[11px] sm:text-xs font-semibold tracking-wide text-slate-500 uppercase">
                           {stat.label}
                         </p>
                       </div>
                     ))}
                   </div>
-
                 </div>
               </SwiperSlide>
             ))}
@@ -143,11 +153,11 @@ export default function ClientStats() {
 
           {/* Navigation */}
           <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 z-40 flex justify-between pointer-events-none">
-            <button className="swiper-prev pointer-events-auto w-11 h-11 md:w-12 md:h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition">
-              <ArrowLeft size={20} />
+            <button className="swiper-prev pointer-events-auto w-11 h-11 md:w-12 md:h-12 rounded-full bg-white shadow-md hover:shadow-xl hover:scale-110 transition-all">
+              <ArrowLeft size={20} className="mx-auto"/>
             </button>
-            <button className="swiper-next pointer-events-auto w-11 h-11 md:w-12 md:h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition">
-              <ArrowRight size={20} />
+            <button className="swiper-next pointer-events-auto w-11 h-11 md:w-12 md:h-12 rounded-full bg-white shadow-md hover:shadow-xl hover:scale-110 transition-all">
+              <ArrowRight size={20} className="mx-auto"/>
             </button>
           </div>
         </div>
@@ -155,3 +165,7 @@ export default function ClientStats() {
     </section>
   );
 }
+
+
+
+
