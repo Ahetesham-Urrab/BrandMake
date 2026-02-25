@@ -45,23 +45,20 @@ const partners = [
 
 export default function HealthcareGrowthGrid() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Exact Header Style with Gradient Underline */}
+        {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3">
             What Makes{" "}
             <span className="text-red-600">
-              {" "}
               Brand Make the Right Growth Partner
             </span>
           </h2>
           <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
         </div>
 
-        {/* Desktop: 3 columns (2 rows) 
-            Mobile: 2 columns (3 rows) 
-        */}
+        {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {partners.map((item, index) => (
             <motion.div
@@ -71,39 +68,62 @@ export default function HealthcareGrowthGrid() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className={`
-                relative p-6 md:p-6 rounded-[1.5rem] md:rounded-[2.5rem] border flex flex-col items-center text-center justify-center min-h-[180px] md:min-h-[280px] transition-all duration-300
-               ${
-                 item.red
-                   ? "bg-gradient-to-b from-[#fe4d46] to-[#bc2928] text-white shadow-xl"
-                   : "bg-white border-slate-200 text-[#EB433D] shadow-lg shadow-slate-100"
-               }
+                relative
+                p-4 md:p-5
+                rounded-[1.25rem] md:rounded-[2rem]
+                border
+                flex flex-col items-center text-center justify-center
+                min-h-[140px] md:min-h-[220px]
+                transition-all duration-300
+                ${
+                  item.red
+                    ? "bg-gradient-to-b from-[#fe4d46] to-[#bc2928] text-white shadow-xl"
+                    : "bg-white border-slate-200 text-[#EB433D] shadow-lg shadow-slate-100"
+                }
               `}
             >
-              {/* Icon Container with Specific Image Border Box */}
+              {/* Icon */}
               <div
                 className={`
-                p-3 md:p-4 rounded-2xl border-2 mb-4
-                ${item.red ? "border-white/40 text-white" : "border-[#EB433D]/20 text-[#EB433D]"}
-              `}
+                  p-2 md:p-3
+                  rounded-2xl
+                  border-2
+                  mb-3
+                  ${
+                    item.red
+                      ? "border-white/40 text-white"
+                      : "border-[#EB433D]/20 text-[#EB433D]"
+                  }
+                `}
               >
                 {item.icon}
               </div>
 
-              {/* Headings used as Titles */}
+              {/* Title */}
               <h4
-                className={`text-xs md:text-lg font-black leading-tight uppercase tracking-tight max-w-[220px] 
-                ${item.red ? "text-white" : "text-[#EB433D]"}`}
+                className={`
+                  text-[11px] md:text-xl
+                  font-black
+                  leading-tight
+                  capitalize
+                  tracking-tight
+                  max-w-[300px]
+                  ${item.red ? "text-white" : "text-[#EB433D]"}
+                `}
               >
                 {item.title}
               </h4>
 
-              {/* Arrow Connection (Image 1 logic) */}
-              <div
+              {/* Arrow */}
+              {/* <div
                 className={`
-                absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 rotate-45 border-t-[6px] border-r-[6px] z-10 hidden md:block
-                ${item.red ? "border-white/10" : "border-slate-50"}
-              `}
-              />
+                  absolute top-1/2 -right-4 -translate-y-1/2
+                  w-8 h-8 rotate-45
+                  border-t-[6px] border-r-[6px]
+                  z-10 hidden md:block
+                  ${item.red ? "border-white/10" : "border-slate-50"}
+                `}
+              /> */}
             </motion.div>
           ))}
         </div>

@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import {
   Search,
+  Target,
+  Users,
+  TrendingUp,
   BarChart3,
-  Globe,
-  Cpu,
-  MessageSquare,
-  Zap,
   ArrowUpRight,
+  ShieldCheck,
 } from "lucide-react";
 
 const services = [
@@ -22,40 +22,39 @@ const services = [
   {
     title: "Weak market positioning",
     desc: "Storytelling that converts. We create content that speaks to your audience.",
-    icon: <MessageSquare className="w-6 h-6 md:w-8 md:h-8" />,
+    icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-[#EB433D]",
     light: "bg-red-50",
   },
   {
     title: "Low-quality or unqualified leads",
     desc: "Custom roadmaps designed to scale your business across all channels.",
-    icon: <Globe className="w-6 h-6 md:w-8 md:h-8" />,
+    icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-purple-600",
     light: "bg-purple-50",
   },
   {
     title: "Inconsistent patient flow",
     desc: "Real-time insights and performance tracking to maximize your ROI.",
-    icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
+    icon: <TrendingUp className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-emerald-600",
     light: "bg-emerald-50",
   },
   {
     title: "No clear tracking of marketing ROI",
     desc: "Leverage cutting-edge AI to streamline your marketing workflows.",
-    icon: <Cpu className="w-6 h-6 md:w-8 md:h-8" />,
+    icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-indigo-600",
     light: "bg-indigo-50",
   },
   {
     title: "No Credibility and Growth",
     desc: "Targeted ad campaigns that put your brand in front of the right buyers.",
-    icon: <Zap className="w-6 h-6 md:w-8 md:h-8" />,
+    icon: <ShieldCheck className="w-6 h-6 md:w-8 md:h-8" />,
     accent: "bg-orange-500",
     light: "bg-orange-50",
   },
 ];
-
 export default function Services() {
   return (
     <section className="py-10 relative overflow-hidden" id="services">

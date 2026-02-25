@@ -2,16 +2,17 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const logos = [
-  { name: "AirCool", src: "logos/AirCool.png" },
-  { name: "Alpha Realty", src: "logos/Alpha Realty Logo.webp" },
-  { name: "Avanza", src: "logos/Avanza Logo white.webp", darkBg: true },
-  { name: "Geometrix", src: "logos/Geometrix.png" },
-  { name: "HNS", src: "logos/HNS.png" },
-  { name: "JH", src: "logos/JH.png" },
-  { name: "Phantom", src: "logos/phantom logo.webp" },
-  { name: "SunC", src: "logos/SunC logo.webp" },
+  { name: "AirCool", src: "logos/1.jpg.jpeg" },
+  { name: "Alpha Realty", src: "logos/2.jpg.jpeg" },
+  { name: "Avanza", src: "logos/3.jpg.jpeg", darkBg: true },
+  { name: "Geometrix", src: "logos/4.jpg.jpeg" },
+  { name: "HNS", src: "logos/5.jpg.jpeg" },
+  { name: "JH", src: "logos/6.jpg.jpeg" },
+  { name: "Phantom", src: "logos/7.jpg.jpeg" },
+ 
 ];
 
 export default function TrustedClient() {

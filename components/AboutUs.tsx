@@ -118,9 +118,9 @@ export default function About() {
 
             <div className="relative z-10 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden border-[8px] md:border-[16px] border-white shadow-2xl transition-all duration-700 hover:shadow-red-500/10 group">
               <img
-                src="/healthcare_strategy.jpg"
+                src="/team_strategy.avif"
                 alt="Healthcare Marketing Strategy"
-                className="w-full h-[500px] md:h-[650px] object-cover transition-transform duration-1000 group-hover:scale-110"
+                className="w-full h-[500px] md:h-[460px] object-cover transition-transform duration-1000 group-hover:scale-110"
               />
 
               {/* Floating Overlay Card */}

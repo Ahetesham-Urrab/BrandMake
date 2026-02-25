@@ -84,7 +84,7 @@ export default function Hero() {
             animate="visible"
             className="text-center lg:text-left"
           >
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-50 px-3 py-1 text-xs font-bold tracking-wider text-[#EB433D] uppercase"
             >
@@ -93,7 +93,7 @@ export default function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#EB433D]"></span>
               </span>
               Digital Growth Partner
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1
               variants={itemVariants}
@@ -109,12 +109,12 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-700 sm:text-base md:text-lg lg:mx-0"
+              className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-gray-700 sm:text-base md:text-lg lg:mx-0"
             >
               Be visible where real patients search, compare, and choose - with Performance Marketing</motion.p>
 
             {/* Features */}
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="mx-auto mt-8 grid max-w-md grid-cols-1 gap-3 lg:mx-0"
             >
@@ -130,7 +130,7 @@ export default function Hero() {
                   </motion.div>
                 ),
               )}
-            </motion.div>
+            </motion.div> */}
 
             {/* CTA Buttons */}
             <motion.div
@@ -170,14 +170,14 @@ export default function Hero() {
               className="relative z-20"
             >
               <img
-                src="/banner.svg"
+                src="/banner.jpg"
                 alt="Marketing Agency"
                 className="w-full rounded-3xl shadow-2xl ring-1 ring-black/5"
               />
             </motion.div>
 
             {/* Floating Badge 1: ROI */}
-            <motion.div
+            {/* <motion.div
               animate={{ y: [0, 20, 0] }}
               transition={{
                 duration: 4,
@@ -196,10 +196,10 @@ export default function Hero() {
                 </p>
                 <p className="text-lg font-extrabold text-black">+142%</p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Floating Badge 2: Engagement */}
-            <motion.div
+            {/* <motion.div
               animate={{ y: [0, -25, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -right-4 bottom-1/4 z-30 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl shadow-black/5"
@@ -213,7 +213,7 @@ export default function Hero() {
                 </p>
                 <p className="text-lg font-extrabold text-black">12.4%</p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Background Accent Decorative Blur */}
             <div className="absolute -inset-4 -z-10 bg-red-100 blur-3xl opacity-30 rounded-full" />
