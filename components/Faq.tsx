@@ -6,24 +6,32 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqData = [
   {
-    question: "How long does it take to build a website?",
-    answer: "The Website Development timeline depends on the project scope and complexity. On average, static sites take 2–4 weeks, while dynamic or e-commerce websites take 6–8 weeks."
+    question: "Why is our clinic getting enquiries but not actual patients?",
+    answer: "Many clinics generate leads, but not all leads are treatment-ready. Without proper targeting, positioning, and lead filtration, sales teams spend time on low-intent enquiries that rarely convert into consultations."
   },
   {
-    question: "Do you offer website maintenance and support?",
-    answer: "Yes, we provide ongoing maintenance, updates, and technical support to ensure your website stays secure, optimized, and up to date."
+    question: "Why does our clinic struggle with poor-quality leads?",
+    answer: "Low-quality leads often come from broad targeting, generic messaging, or lack of pre-qualification. High-intent patient acquisition requires precise targeting and a structured funnel."
   },
   {
-    question: "What technologies do you use for website development?",
-    answer: "We use modern technologies like React.js, Next.js, Node.js, Tailwind CSS, and CMS platforms such as WordPress or Webflow, depending on your needs."
+    question: "How is Brand Make different from a typical digital marketing agency?",
+    answer: "We specialize in healthcare performance marketing. Instead of just running ads, we build end-to-end growth systems — including strategy, positioning, visibility, lead filtration, and performance tracking."
   },
   {
-    question: "How much does a website cost?",
-    answer: "The cost varies based on design complexity, functionality, and features. We offer flexible packages to fit every business need and budget."
+    question: "What kind of results have you delivered for healthcare clients?",
+    answer: "Our case studies show improvements in local visibility, lead quality, brand searches, and patient enquiries — leading to measurable business growth for clinics."
   },
   {
-    question: "Can you redesign my existing website?",
-    answer: "Yes, we can modernize your current website with a fresh design, improved performance, and better user experience without losing existing data."
+    question: "How soon can we expect to see results?",
+    answer: "Initial improvements in visibility and lead quality can typically be seen within the first few months, while sustained growth builds over time."
+  },
+   {
+    question: "Do you work with specific specialties only?",
+    answer: "We primarily work with healthcare providers, including plastic surgery, dermatology, and multi-specialty clinics."
+  },
+   {
+    question: "What happens after we book a strategy consultation?",
+    answer: "We conduct a discovery discussion to understand your clinic, current marketing efforts, challenges, and goals — and determine whether our approach is the right fit."
   }
 ];
 

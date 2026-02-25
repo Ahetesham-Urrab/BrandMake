@@ -44,9 +44,9 @@ export default function ServiceImageCards() {
                 {/* Overlay badge */}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
 
-                <span className="absolute top-3 left-3 bg-white/90 text-slate-900 text-xs font-semibold px-3 py-1 rounded-full shadow">
+                {/* <span className="absolute top-3 left-3 bg-white/90 text-slate-900 text-xs font-semibold px-3 py-1 rounded-full shadow">
                   Service
-                </span>
+                </span> */}
               </div>
 
               {/* Content */}

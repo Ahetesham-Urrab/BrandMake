@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const logos = [
   { name: "AirCool", src: "logos/1.jpg.jpeg" },
@@ -12,24 +11,26 @@ const logos = [
   { name: "HNS", src: "logos/5.jpg.jpeg" },
   { name: "JH", src: "logos/6.jpg.jpeg" },
   { name: "Phantom", src: "logos/7.jpg.jpeg" },
- 
 ];
 
 export default function TrustedClient() {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-10 overflow-hidden">
-      <div className="container mx-auto px-4 mb-8">
-        <h2 className="text-3xl md:text-4xl font-black text-center text-slate-900 tracking-tight">
-         Trusted by <span className="text-red-600"> Healthcare Practices That Believe in Growth</span>
+    <section className="py-12 overflow-hidden">
+      <div className="container mx-auto px-4 mb-10">
+        <h2 className="text-2xl md:text-4xl font-black tracking-tight text-slate-900 mb-3 text-center">
+          Trusted by{" "}
+          <span className="text-red-600">
+            Healthcare Practices That Believe in Growth
+          </span>
         </h2>
         <div className="h-1 w-12 bg-red-600 mx-auto mt-4 rounded-full" />
       </div>
 
       <div className="relative flex overflow-hidden">
         <motion.div
-          className="flex flex-none items-center gap-12 cursor-grab active:cursor-grabbing"
+          className="flex flex-none items-center gap-14 cursor-grab active:cursor-grabbing"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: 30,
@@ -43,12 +44,27 @@ export default function TrustedClient() {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-none w-48 h-24 flex items-center justify-center p-6 rounded-2xl border border-slate-200 bg-white shadow-sm"
+              className="
+                flex-none
+                w-56 md:w-64
+                h-28 md:h-32
+                flex items-center justify-center
+                p-6 md:p-8
+                rounded-2xl
+                border border-slate-200
+                bg-white
+                shadow-sm
+              "
             >
               <img
                 src={logo.src}
                 alt={`${logo.name} logo`}
-                className="max-w-full max-h-full object-contain pointer-events-none"
+                className="
+                  max-w-[10px] md:max-w-[180px]
+                  max-h-[70px] md:max-h-[70px]
+                  object-contain
+                  pointer-events-none
+                "
               />
             </div>
           ))}

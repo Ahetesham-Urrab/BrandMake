@@ -1,31 +1,34 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
-import {   SearchCheck,
+import {
+  SearchCheck,
   ClipboardList,
   Settings,
-  Rocket, } from "lucide-react";
+  Rocket,
+} from "lucide-react";
 
 const steps = [
   {
     title: "Business Discovery & Market Analysis",
     icon: <SearchCheck />,
-    color: "#84cc16",
+    gradient: "from-sky-400 to-blue-600",
   },
   {
     title: "Custom Strategy Development",
     icon: <ClipboardList />,
-    color: "#1e3a8a",
+    gradient: "from-violet-400 to-indigo-600",
   },
   {
     title: "Execution & Performance Optimization",
     icon: <Settings />,
-    color: "#84cc16",
+    gradient: "from-emerald-400 to-green-600",
   },
   {
     title: "Scaling & Automation",
     icon: <Rocket />,
-    color: "#1e3a8a",
+    gradient: "from-amber-400 to-orange-600",
   },
 ];
 
@@ -34,16 +37,18 @@ const ModernSnakeFlow = () => {
     <section className="py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-6">
           <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">
-            Here's How <span className="text-red-600">Brand Make</span> Delivers End-to-End Growth Support
+            Here's How <span className="text-red-600">Brand Make</span> Delivers
+            End-to-End Growth Support
           </h2>
           <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
         </div>
 
         {/* Flow Container */}
         <div className="relative min-h-[400px] lg:h-[400px] flex items-center">
-          {/* Desktop Snake Path */}
+
+          {/* ✅ DESKTOP SNAKE PATH — UNCHANGED */}
           <div className="hidden lg:block absolute inset-0 pointer-events-none">
             <svg
               viewBox="0 0 1200 400"
@@ -74,6 +79,7 @@ const ModernSnakeFlow = () => {
                 strokeWidth="40"
                 strokeLinecap="round"
               />
+
               <motion.path
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
@@ -102,7 +108,7 @@ const ModernSnakeFlow = () => {
                     isEven ? "lg:-translate-y-16" : "lg:translate-y-16"
                   }`}
                 >
-                  {/* Title (mobile: always below icon, desktop: snake logic) */}
+                  {/* Title */}
                   <div
                     className={`
                       flex flex-col items-center text-center
@@ -116,20 +122,33 @@ const ModernSnakeFlow = () => {
                     </h3>
                   </div>
 
-                  {/* Icon */}
-                  <div className="relative group cursor-default order-1 lg:order-2">
+                  {/* ✅ ICON WITH GRADIENT BG (ONLY CHANGE) */}
+                  <div className="relative group order-1 lg:order-2">
+                    {/* Glow */}
                     <div
-                      className="absolute inset-0 rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"
-                      style={{ backgroundColor: step.color }}
+                      className={`absolute inset-0 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 bg-gradient-to-br ${step.gradient}`}
                     />
+
+                    {/* Icon Container */}
                     <div
-                      className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-xl flex items-center justify-center border border-slate-100 relative z-10 transition-all duration-300 group-hover:scale-110"
-                      style={{ borderTop: `4px solid ${step.color}` }}
+                      className={`
+                        w-20 h-20 md:w-24 md:h-24
+                        rounded-2xl
+                        bg-gradient-to-br ${step.gradient}
+                        shadow-xl
+                        flex items-center justify-center
+                        relative z-10
+                        transition-transform duration-300
+                        group-hover:scale-110
+                      `}
                     >
-                      {React.cloneElement(
-                        step.icon as React.ReactElement,
-                        { size: 28, color: "#000000" } as any,
-                      )}
+                      {/* Inner white plate */}
+                      <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-xl flex items-center justify-center shadow-md">
+                        {React.cloneElement(
+                          step.icon as React.ReactElement,
+                          { size: 26, color: "#000000" } as any
+                        )}
+                      </div>
                     </div>
                   </div>
                 </motion.div>

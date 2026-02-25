@@ -128,28 +128,28 @@ export default function About() {
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center">
                     <p className="text-[#EB433D] font-black text-xl md:text-2xl">
-                      ROI
+                     10X 
                     </p>
                     <p className="text-slate-400 text-[8px] font-black uppercase tracking-widest mt-1">
-                      Focused
+                      ROI
                     </p>
                   </div>
                   <div className="flex justify-center border-x border-slate-100">
                     <div className="text-center">
                       <p className="text-slate-900 font-black text-xl md:text-2xl">
-                        100%
+                        1 Lac+
                       </p>
                       <p className="text-slate-400 text-[8px] font-black uppercase tracking-widest mt-1">
-                        Trust
+                        Lead Generated
                       </p>
                     </div>
                   </div>
                   <div className="text-center">
                     <p className="text-slate-900 font-black text-xl md:text-2xl">
-                      Scalable
+                      100+
                     </p>
                     <p className="text-slate-400 text-[8px] font-black uppercase tracking-widest mt-1">
-                      Growth
+                      Happy Clients
                     </p>
                   </div>
                 </div>

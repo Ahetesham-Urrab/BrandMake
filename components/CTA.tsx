@@ -8,16 +8,16 @@ export default function CTA() {
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Card */}
-        <div className="relative bg-red-50 border rounded-3xl shadow-sm overflow-visible">
+        <div className="relative bg-gradient-to-r from-pink-100 via-red-200 to-pink-100 backdrop-blur-lg border rounded-3xl shadow-sm overflow-visible">
 
           {/* Doctor Image */}
-          <div className="absolute bottom-0 left-6 md:left-30 z-0 hidden md:block">
+          <div className="absolute bottom-0 left-6 md:left-20 z-0 hidden md:block">
             <Image
-              src="/doctor.png"
+              src="/logos/down.png"
               alt="Doctor"
               width={460}
               height={460}
-              className="w-[220px] md:w-[370px] object-contain"
+              className="w-[220px] md:w-[400px] object-contain"
               priority
             />
           </div>
@@ -66,6 +66,12 @@ export default function CTA() {
           </div>
         </div>
       </div>
+        
+  <div className="absolute top-7 left-1/4 w-3 h-3 bg-red-500 rounded-full opacity-50 animate-bounce-slow"></div>
+  <div className="absolute bottom-10 right-1/3 w-4 h-4 bg-red-200 rounded-full opacity-50 animate-bounce-slower"></div>
+  <div className="absolute top-12 right-1/4 w-2 h-2 bg-red-300 rounded-full opacity-50 animate-bounce-slow"></div>
+  <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-red-500 rounded-full opacity-60 animate-bounce-slower"></div>
+  <div className="absolute top-1/2 right-1/2 w-2.5 h-2.5 bg-red-300 rounded-full opacity-70 animate-bounce-slow"></div>
     </section>
   );
 }
