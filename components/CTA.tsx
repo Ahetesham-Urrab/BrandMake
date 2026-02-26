@@ -10,13 +10,13 @@ export default function CTA() {
         <div className="relative bg-gradient-to-r from-pink-100 via-red-200 to-pink-100 backdrop-blur-lg border rounded-3xl shadow-sm overflow-visible">
 
           {/* Desktop Doctor Image */}
-          <div className="absolute bottom-0 left-6 md:left-20 z-0 hidden md:block">
+          <div className="absolute bottom-0 left-6 md:left-10 z-0 hidden md:block">
             <Image
-              src="/logos/down.png"
+              src="/down3.png"
               alt="Doctor"
               width={460}
               height={460}
-              className="w-[220px] md:w-[400px] object-contain"
+              className="w-[220px] md:w-[510px] object-contain"
               priority
             />
           </div>
@@ -31,16 +31,7 @@ export default function CTA() {
             <div className="md:w-1/2 text-center md:text-left flex flex-col gap-4">
 
               {/* Mobile Image (above inputs) */}
-              <div className="md:hidden w-full flex justify-center mb-1">
-                <Image
-                  src="/logos/down.png"
-                  alt="Doctor"
-                  width={220}
-                  height={220}
-                  className="w-48 object-contain"
-                  priority
-                />
-              </div>
+             
 
               {/* Heading */}
               <h2 className="text-2xl md:text-3xl font-black bg-gradient-to-r from-[#EB433D] to-black bg-clip-text text-transparent leading-tight mb-0">

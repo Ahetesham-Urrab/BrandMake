@@ -51,7 +51,7 @@ export default function About() {
 
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-[8px] border-white shadow-2xl group">
                 <img
-                  src="/team_strategy.avif"
+                  src="/about.jpg"
                   alt="Healthcare Marketing Strategy"
                   className="w-full h-[360px] object-cover"
                 />
@@ -142,7 +142,7 @@ export default function About() {
 
             <div className="relative z-10 rounded-[4rem] overflow-hidden border-[16px] border-white shadow-2xl group">
               <img
-                src="/team_strategy.avif"
+                src="/about.jpg"
                 alt="Healthcare Marketing Strategy"
                 className="w-full h-[460px] object-cover transition-transform duration-1000 group-hover:scale-110"
               />

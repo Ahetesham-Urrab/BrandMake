@@ -28,7 +28,7 @@ export default function Hero() {
     <section className="relative flex min-h-svh flex-col md:flex-row items-center overflow-hidden">
       {/* ✅ MOBILE LOGO (ONLY MOBILE) */}
       <div className="absolute top-4 left-1/2 z-20 -translate-x-1/2 md:hidden">
-        <img src="/footer-logo.svg" alt="Logo" className="h-15 w-auto" />
+        <img src="/logos/bmlogo.png" alt="Logo" className="h-auto w-auto" />
       </div>
 
       {/* --- DIGITAL STRUCTURE BACKGROUND --- */}
@@ -106,7 +106,7 @@ export default function Hero() {
 
             <motion.div
               variants={itemVariants}
-              className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
+              className="mt-5 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -133,7 +133,7 @@ export default function Hero() {
               className="relative z-20"
             >
               <img
-                src="/logos/down.png"
+                src="/down1.png"
                 alt="Marketing Agency"
                 className="w-full rounded-3xl"
               />
@@ -151,16 +151,16 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="absolute bottom-0 left-0 right-0 md:hidden z-10"
       >
-        <div className="relative mx-auto w-full max-w-md px-4 pb-4">
+        <div className="relative mx-auto w-[370px] max-w-md px-4 ">
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="relative z-20"
           >
             <img
-              src="/logos/down.png"
+              src="/down1.png"
               alt="Marketing Agency"
-              className="w-full rounded-3xl"
+              className="w-[370px] rounded-3xl"
             />
           </motion.div>
         </div>
@@ -182,7 +182,7 @@ export default function Hero() {
             className="w-full max-w-sm rounded-2xl bg-white p-6 sm:p-8 shadow-2xl"
           >
             {/* Heading */}
-            <h3 className="text-xl font-black text-slate-900 text-center mb-2">
+            <h3 className="text-xl font-black text-slate-900 text-center mb-3">
               Book a Strategy Call
             </h3>
             {/* <p className="text-sm text-slate-500 text-center mb-6">
@@ -197,7 +197,7 @@ export default function Hero() {
                 </label> */}
                 <input
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Name"
                   className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
                   required
                 />
@@ -209,7 +209,7 @@ export default function Hero() {
                 </label> */}
                 <input
                   type="tel"
-                  placeholder="Enter your phone number"
+                  placeholder="Contact Number"
                   className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
                   required
                 />
@@ -221,7 +221,18 @@ export default function Hero() {
                 </label> */}
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Email"
+                  className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
+                  required
+                />
+              </div>
+              <div>
+                {/* <label className="block text-sm font-semibold text-slate-700 mb-1">
+                  Full Name
+                </label> */}
+                <input
+                  type="text"
+                  placeholder="Clinic Name"
                   className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
                   required
                 />
