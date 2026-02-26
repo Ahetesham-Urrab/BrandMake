@@ -43,9 +43,9 @@ export default function Process() {
           </div>
 
           {/* Flow Container */}
-          <div className="relative min-h-[400px] h-[400px] flex items-center">
-            {/* Snake Path */}
-            <div className="absolute inset-0 pointer-events-none">
+          <div className="relative min-h-[400px] lg:h-[400px] flex items-center">
+            {/* ✅ DESKTOP SNAKE PATH — UNCHANGED */}
+            <div className="hidden lg:block absolute inset-0 pointer-events-none">
               <svg
                 viewBox="0 0 1200 400"
                 fill="none"
@@ -89,7 +89,7 @@ export default function Process() {
             </div>
 
             {/* Steps */}
-            <div className="grid grid-cols-4 gap-8 w-full relative z-10">
+            <div className="flex flex-col lg:grid lg:grid-cols-4 gap-12 lg:gap-8 w-full relative z-10">
               {steps.map((step, idx) => {
                 const isEven = idx % 2 === 0;
 
@@ -101,30 +101,49 @@ export default function Process() {
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.15 }}
                     className={`flex flex-col items-center text-center ${
-                      isEven ? "-translate-y-16" : "translate-y-16"
+                      isEven ? "lg:-translate-y-16" : "lg:translate-y-16"
                     }`}
                   >
                     {/* Title */}
-                    <div className={`order-2 mt-4 ${isEven ? "mb-6" : "mt-6"}`}>
+                    <div
+                      className={`
+                      flex flex-col items-center text-center
+                      order-2 mt-4
+                      lg:mt-0
+                      ${isEven ? "lg:order-1 lg:mb-6" : "lg:order-3 lg:mt-6"}
+                    `}
+                    >
                       <h3 className="text-lg md:text-xl font-black text-slate-900 leading-tight max-w-[360px]">
                         {step.title}
                       </h3>
                     </div>
 
-                    {/* Icon */}
-                    <div className="relative group order-1">
+                    {/* ✅ ICON WITH GRADIENT BG (ONLY CHANGE) */}
+                    <div className="relative group order-1 lg:order-2">
+                      {/* Glow */}
                       <div
-                        className={`absolute inset-0 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition bg-gradient-to-br ${step.gradient}`}
+                        className={`absolute inset-0 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 bg-gradient-to-br ${step.gradient}`}
                       />
+
+                      {/* Icon Container */}
                       <div
-                        className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${step.gradient}
-                        shadow-xl flex items-center justify-center relative z-10 group-hover:scale-110 transition`}
+                        className={`
+                        w-20 h-20 md:w-24 md:h-24
+                        rounded-2xl
+                        bg-gradient-to-br ${step.gradient}
+                        shadow-xl
+                        flex items-center justify-center
+                        relative z-10
+                        transition-transform duration-300
+                        group-hover:scale-110
+                      `}
                       >
+                        {/* Inner white plate */}
                         <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-xl flex items-center justify-center shadow-md">
-                          {React.cloneElement(step.icon, {
-                            size: 26,
-                            color: "#000",
-                          })}
+                          {React.cloneElement(
+                            step.icon as React.ReactElement,
+                            { size: 26, color: "#000000" } as any,
+                          )}
                         </div>
                       </div>
                     </div>
