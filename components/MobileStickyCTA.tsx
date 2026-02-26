@@ -36,13 +36,7 @@ export default function MobileStickyCTA() {
 
           <div className="flex gap-3">
             {/* BOOK NOW → OPEN MODAL */}
-            <button
-              onClick={() => setOpen(true)}
-              className="flex-1 flex items-center justify-center gap-2 bg-white text-red-500 font-semibold py-2 rounded-full"
-            >
-              <Phone className="w-4 h-4" />
-              Book Now
-            </button>
+           
 
             {/* CHAT */}
             <a
@@ -52,6 +46,13 @@ export default function MobileStickyCTA() {
               <MessageCircle className="w-4 h-4" />
               Chat Now
             </a>
+             <button
+              onClick={() => setOpen(true)}
+              className="flex-1 flex items-center justify-center gap-2 bg-white text-red-500 font-semibold py-2 rounded-full"
+            >
+              <Phone className="w-4 h-4" />
+              Book Now
+            </button>
           </div>
         </div>
       </div>

@@ -10,13 +10,13 @@ export default function CTA() {
         <div className="relative bg-gradient-to-r from-pink-100 via-red-200 to-pink-100 backdrop-blur-lg border rounded-3xl shadow-sm overflow-visible">
 
           {/* Desktop Doctor Image */}
-          <div className="absolute bottom-0 left-6 md:left-10 z-0 hidden md:block">
+          <div className="absolute bottom-0 left-6 md:left-5 z-0 hidden md:block">
             <Image
-              src="/down3.png"
+              src="/down4.png"
               alt="Doctor"
               width={460}
               height={460}
-              className="w-[220px] md:w-[510px] object-contain"
+              className="w-[220px] md:w-[580px] object-contain"
               priority
             />
           </div>
