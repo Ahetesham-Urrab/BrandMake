@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-svh items-center overflow-hidden">
+    <section className="relative flex min-h-svh flex-col md:flex-row items-center overflow-hidden">
       {/* ✅ MOBILE LOGO (ONLY MOBILE) */}
       <div className="absolute top-4 left-1/2 z-20 -translate-x-1/2 md:hidden">
         <img src="/footer-logo.svg" alt="Logo" className="h-15 w-auto" />
@@ -77,7 +77,7 @@ export default function Hero() {
         <div className="absolute bottom-[-10%] right-[-5%] h-[400px] w-[400px] rounded-full bg-gray-200/50 blur-[100px]" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 flex-1">
         <div className="grid items-center gap-10 md:gap-14 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <motion.div
@@ -88,7 +88,7 @@ export default function Hero() {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-3xl font-extrabold leading-tight text-black sm:text-3xl md:text-4xl xl:text-5xl"
+              className="mt-[110px] md:mt-0 text-3xl font-extrabold leading-tight text-black sm:text-3xl md:text-4xl xl:text-5xl"
             >
               <span className="block">More Genuine Leads</span>
               <span className="block bg-gradient-to-r from-[#EB433D] to-black bg-clip-text text-transparent">
@@ -125,7 +125,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative mx-auto hidden w-full max-w-xl md:block"
+            className="relative hidden md:block mx-auto w-full max-w-xl"
           >
             <motion.div
               animate={{ y: [0, -15, 0] }}
@@ -144,6 +144,28 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* MOBILE IMAGE AT BOTTOM */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="absolute bottom-0 left-0 right-0 md:hidden z-10"
+      >
+        <div className="relative mx-auto w-full max-w-md px-4 pb-4">
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="relative z-20"
+          >
+            <img
+              src="/logos/down.png"
+              alt="Marketing Agency"
+              className="w-full rounded-3xl"
+            />
+          </motion.div>
+        </div>
+      </motion.div>
+
       {/* CONTACT MODAL */}
       {open && (
         <motion.div
@@ -160,64 +182,59 @@ export default function Hero() {
             className="w-full max-w-sm rounded-2xl bg-white p-6 sm:p-8 shadow-2xl"
           >
             {/* Heading */}
-            <h3 className="text-xl font-black text-slate-900 text-center mb-1">
+            <h3 className="text-xl font-black text-slate-900 text-center mb-2">
               Book a Strategy Call
             </h3>
-            <p className="text-sm text-slate-500 text-center mb-6">
+            {/* <p className="text-sm text-slate-500 text-center mb-6">
               Fill in your details and we’ll get back to you
-            </p>
+            </p> */}
 
             {/* Form */}
             <form className="space-y-4">
-              {/* Name */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1">
+                {/* <label className="block text-sm font-semibold text-slate-700 mb-1">
                   Full Name
-                </label>
+                </label> */}
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
+                  className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
                   required
                 />
               </div>
 
-              {/* Phone */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1">
+                {/* <label className="block text-sm font-semibold text-slate-700 mb-1">
                   Phone Number
-                </label>
+                </label> */}
                 <input
                   type="tel"
                   placeholder="Enter your phone number"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
+                  className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
                   required
                 />
               </div>
 
-              {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1">
+                {/* <label className="block text-sm font-semibold text-slate-700 mb-1">
                   Email Address
-                </label>
+                </label> */}
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
+                  className="w-full  placeholder:text-black/70 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#EB433D]/40"
                   required
                 />
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
-                className="w-full rounded-xl bg-gradient-to-b from-[#fe4d46] to-[#bc2928] py-3 font-bold text-white shadow-lg hover:scale-[1.02] transition-all"
+                className="w-full  placeholder:text-black/70 rounded-xl bg-gradient-to-b from-[#fe4d46] to-[#bc2928] py-3 font-bold text-white shadow-lg hover:scale-[1.02] transition-all"
               >
                 Request Callback
               </button>
             </form>
 
-            {/* Close */}
             <button
               onClick={() => setOpen(false)}
               className="mt-4 w-full text-sm font-semibold text-slate-500 hover:text-slate-800"

@@ -60,7 +60,7 @@ export default function TrustedClient() {
                 src={logo.src}
                 alt={`${logo.name} logo`}
                 className="
-                  max-w-[10px] md:max-w-[180px]
+                  max-w-[100px] md:max-w-[180px]
                   max-h-[70px] md:max-h-[70px]
                   object-contain
                   pointer-events-none
